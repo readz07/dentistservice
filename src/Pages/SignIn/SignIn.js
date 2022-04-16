@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
     return (
@@ -24,10 +25,10 @@ const SignIn = () => {
                 </Button>
                 <Form.Group className="mt-3" controlId="formBasicText">
                 <Form.Text className="text-primary">
-                        Forget Password Click Here
+                        Forget Password <Link to='/signup'>Click Here</Link>
                 </Form.Text>
-                <Form.Text className="text-primary mr-3">
-                        Didn't Sign Up Click Here
+                <Form.Text className="text-primary ms-3">
+                        Didn't Sign Up <Link to='/signup'>Click Here</Link>
                 </Form.Text>
                 </Form.Group>
             </Form>

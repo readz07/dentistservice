@@ -9,6 +9,7 @@ import Blog from './Pages/Blog/Blog'
 import Reviews from './Pages/Reviews/Reviews'
 import SignIn from './Pages/SignIn/SignIn'
 import SignUp from './Pages/SignUp/SignUp'
+import NotFound from './Pages/NotFound/NotFound';
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/reviews" element={<Reviews></Reviews>} />
         <Route path="/signin" element={<SignIn></SignIn>} />
         <Route path="/signup" element={<SignUp></SignUp>} />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
     </div>
