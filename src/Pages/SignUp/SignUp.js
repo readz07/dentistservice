@@ -70,7 +70,7 @@ const SignUp = () => {
                 </Form.Group>
                 {errorMsg}
                 <Button variant="primary" type="submit">
-                    Submit
+                    Sing Up
                 </Button>
                 <Form.Group className="mt-3" controlId="formBasicText">                
                 <Form.Text className="text-primary">

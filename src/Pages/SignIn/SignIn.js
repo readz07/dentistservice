@@ -74,7 +74,7 @@ const SignIn = () => {
                
                 <p>{errorMsg}</p>
                 <Button variant="primary" type="submit">
-                    Submit
+                    Sign In
                 </Button>
                 <Form.Group className="mt-3" controlId="formBasicText">
                     <Form.Text className="text-primary">
