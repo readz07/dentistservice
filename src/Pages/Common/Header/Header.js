@@ -14,7 +14,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky='top'>
                 <Container>
-                    <Navbar.Brand as ={Link} to="/">I Am Dentist</Navbar.Brand>
+                    <Navbar.Brand as ={Link} to="/">I Am A Dentist</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -22,11 +22,11 @@ const Header = () => {
                             <Nav.Link as={Link} to="/services">Services</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/reviews">FAQ</Nav.Link>                      
+                            <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>                      
                         </Nav>
                         <Nav>
                             {
-                                user ? <button onClick={handleSignOut} className='btn btn-danger'>Sign Out </button>
+                                user ? <button onClick={handleSignOut} className='btn btn-warning ps-5 pe-5'>Sign Out </button>
                                 : <Nav.Link as={Link} to="/signin">Sign In</Nav.Link>
                             }
                             

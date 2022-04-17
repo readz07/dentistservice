@@ -50,8 +50,8 @@ const SignUp = () => {
     }  
     return (
         
-            <div className='container col-md-6 mt-5'>
-            <h3>Welcome Please Sign Up Here</h3>
+            <div className='container col-md-6 mt-5 mb-5'>
+            <h2>Welcome Please Sign Up Here</h2><br/>
             <Form onSubmit={handleNewUserCreate}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>

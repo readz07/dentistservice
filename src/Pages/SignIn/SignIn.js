@@ -52,24 +52,27 @@ const SignIn = () => {
     if (loading) {
         return <p>Loading...</p>;
     }
+    if (sending) {
+        return <p>Sending...</p>;
+    }
     if (user) {
 
         navigate(from, { replace: true });
 
     }
     return (
-        <div className='container col-md-6 mt-5'>
-            <h3>Almost Done! Sign In Here</h3>
+        <div className='container col-md-6 mt-5 mb-5'>
+            <h2>Sign In Here</h2><br/>
             <Form onSubmit={handleSignIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onBlur={handleEmailOnBlur} type="email" placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmailOnBlur} type="email" placeholder="Enter email" required/>
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onBlur={handlePasswordOnBlur} type="password" placeholder="Password" />
+                    <Form.Control onBlur={handlePasswordOnBlur} type="password" placeholder="Password" required/>
                 </Form.Group>
                
                 <p>{errorMsg}</p>
