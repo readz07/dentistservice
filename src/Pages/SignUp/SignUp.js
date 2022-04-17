@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
-import { sendEmailVerification } from 'firebase/auth';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -14,6 +14,8 @@ const SignUp = () => {
       loading,
       error,
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+
+ 
     const navigate = useNavigate();
     
     const handleName = event =>{
@@ -49,7 +51,7 @@ const SignUp = () => {
     return (
         
             <div className='container col-md-6 mt-5'>
-            <h4>Welcome Please Sign Up Here</h4>
+            <h3>Welcome Please Sign Up Here</h3>
             <Form onSubmit={handleNewUserCreate}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -71,11 +73,12 @@ const SignUp = () => {
                     Submit
                 </Button>
                 <Form.Group className="mt-3" controlId="formBasicText">                
-                <Form.Text className="text-primary ms-3">
+                <Form.Text className="text-primary">
                         Already Registered!  <Link to='/signin'>Sign In Here</Link>
                 </Form.Text>
                 </Form.Group>
             </Form>
+            <SocialLogin></SocialLogin>
         </div>
        
     );

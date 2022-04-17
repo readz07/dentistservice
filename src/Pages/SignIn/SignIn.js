@@ -4,7 +4,8 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-import { async } from '@firebase/util';
+
+import SocialLogin from '../SocialLogin/SocialLogin';
 const SignIn = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -58,7 +59,7 @@ const SignIn = () => {
     }
     return (
         <div className='container col-md-6 mt-5'>
-            <h4>Almost Done! Sign In Here</h4>
+            <h3>Almost Done! Sign In Here</h3>
             <Form onSubmit={handleSignIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -70,9 +71,7 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control onBlur={handlePasswordOnBlur} type="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Accept Terms and Conditions" />
-                </Form.Group>
+               
                 <p>{errorMsg}</p>
                 <Button variant="primary" type="submit">
                     Submit
@@ -86,6 +85,7 @@ const SignIn = () => {
                     </Form.Text>
                 </Form.Group>
             </Form>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
