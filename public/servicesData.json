@@ -1,14 +1,23 @@
 [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",      
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
-      "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
+      "title": "Root Canal Therapy",
+      "image": "https://www.dentalphobia.com/wp-content/uploads/2016/03/cosmetic-dentistry-new-york-city-300x200.jpg",
+      "paragraph": "Tooth decay, trauma or cracks can cause the nerves of teeth to die and chronic dental pain.",      
+      "price": 500
+    },
+    {
+      "id": 2,
+      "title": "Gum Recession Treatment",
+      "image": "https://www.dentalphobia.com/wp-content/uploads/2016/08/cosmetic-dentistry-albany-ny-300x191.jpg",
+      "paragraph": "Gum recession is when gum tissue surrounding the crown of the tooth recedes and exposes more tooth.",      
+      "price": 1000      
+    },
+    {
+      "id": 3,
+      "title": "Cosmetic Dentistry",
+      "image": "https://www.dentalphobia.com/wp-content/uploads/2016/09/tooth-extraction-new-york-ny-300x200.jpg",
+      "paragraph": "Cosmetic dentistry encompasses not only the health of the teeth, but also their aesthetic value.",      
+      "price": 2000    
     }
+]
