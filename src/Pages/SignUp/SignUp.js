@@ -15,6 +15,7 @@ const SignUp = () => {
       error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    
     const handleName = event =>{
         setName(event.target.value)
     }
