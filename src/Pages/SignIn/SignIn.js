@@ -3,6 +3,8 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { async } from '@firebase/util';
 const SignIn = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -16,34 +18,44 @@ const SignIn = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
 
-    const handleEmailOnBlur = event =>{
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
+    const SendPasswordReset = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email)
+            alert('Email Sent')
+        }
+    }
+
+    const handleEmailOnBlur = event => {
         setEmail(event.target.value)
     }
-    const handlePasswordOnBlur = event =>{
+    const handlePasswordOnBlur = event => {
         setPassword(event.target.value)
     }
 
-    const handleSignIn = (event)=>{
+    const handleSignIn = (event) => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password)        
+        signInWithEmailAndPassword(email, password)
     }
 
     let errorMsg;
     if (error) {
         errorMsg =
-        <div>
-          <p className='text-danger'>Error: {error.message}</p>
-        </div>
-      
+            <div>
+                <p className='text-danger'>Error: {error.message}</p>
+            </div>
+
     }
     if (loading) {
-      return <p>Loading...</p>;
+        return <p>Loading...</p>;
     }
     if (user) {
-      
+
         navigate(from, { replace: true });
-      
-    }  
+
+    }
     return (
         <div className='container col-md-6 mt-5'>
             <h4>Almost Done! Sign In Here</h4>
@@ -67,7 +79,7 @@ const SignIn = () => {
                 </Button>
                 <Form.Group className="mt-3" controlId="formBasicText">
                     <Form.Text className="text-primary">
-                        Forget Password <Link to='/signup'>Click Here</Link>
+                        Forget Password <Button onClick={SendPasswordReset}>Click Here</Button>
                     </Form.Text>
                     <Form.Text className="text-primary ms-3">
                         Didn't Sign Up <Link to='/signup'>Click Here</Link>

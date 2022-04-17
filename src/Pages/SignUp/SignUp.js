@@ -42,9 +42,9 @@ const SignUp = () => {
       return <p>Loading...</p>;
     }
     if (user) {
-      return (
+      
           navigate('/')
-      );
+      
     }  
     return (
         
