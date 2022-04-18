@@ -65,9 +65,7 @@ const SignUp = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control onBlur={handlePassword} type="password" placeholder="Password"  required/>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Accept Terms and Conditions" />
-                </Form.Group>
+                
                 {errorMsg}
                 <Button variant="primary" type="submit">
                     Sing Up
