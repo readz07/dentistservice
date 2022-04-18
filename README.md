@@ -1,6 +1,6 @@
 # Single Page Website For Dentist Profession
 
-This project was bootstrapped with [Live Website Link On Nelify ](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Live Website Link On Nelify ](https://dentist-service.netlify.app/).
 
 ## Key features of this project
 
