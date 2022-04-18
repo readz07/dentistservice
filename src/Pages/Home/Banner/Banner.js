@@ -8,7 +8,7 @@ import myDentistImg3 from '../../../images/sliders-img/my-dentist-img-3.png'
 const Banner = () => {
     return (
         <div>
-            <Carousel variant="dark">
+            <Carousel variant="gray">
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -28,7 +28,7 @@ const Banner = () => {
     />
     <Carousel.Caption>
       <h5>I am in Action!</h5>
-      <p>I am serious when comes to client functions</p>
+      <p>I am serious when it comes to client functions</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -39,7 +39,7 @@ const Banner = () => {
     />
     <Carousel.Caption>
       <h5>My Dream Chamber</h5>
-      <p>This took years after years build my chamber</p>
+      <p>It took years after years build my chamber</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

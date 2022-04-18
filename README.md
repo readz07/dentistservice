@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# Single Page Website For Dentist Profession
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Live Website Link On Nelify ](https://github.com/facebook/create-react-app).
+
+## Key features of this project
+
+1. First, I installed React Router for routing.
+              
+2. Second, Firebase is for authentication.
+
+3. There is a protected routing for each booking page.
+
+4. Firebase hooks also intalled for easy authentication process.
+
+5. There is reset password, email verification also added.
+
+6. Bootstrap carousel, form, button and other features have been used for easy web build as well as reponsive purpose.
 
 ## Available Scripts
 
