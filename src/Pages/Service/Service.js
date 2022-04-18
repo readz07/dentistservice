@@ -8,10 +8,10 @@ const Service = ({service}) => {
     const handleServiceDetail = (id)=>{
         navigate(`/service/${id}`)
     }
-    return (
-        <div className='m-3 mt-5 mb-5 mx-auto'>
-            <Card style={{ width: '18rem', height:'100%'}}>
-                    <Card.Img variant="top" src={image} alt="image"/>
+    return (     
+            
+             <Card>
+                    <Card.Img variant="top" src={image} alt="image" width={50}/>
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>
@@ -22,8 +22,10 @@ const Service = ({service}) => {
                         </Card.Text>
                         <Button onClick={()=>handleServiceDetail(id)} variant="primary">Schedule Now!</Button>
                     </Card.Body>
-                </Card>
-        </div>
+                </Card> 
+                
+                
+        
     );
 };
 
