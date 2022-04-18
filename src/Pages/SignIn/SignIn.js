@@ -4,8 +4,10 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 const SignIn = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -25,8 +27,10 @@ const SignIn = () => {
     const SendPasswordReset = async () => {
         if (email) {
             await sendPasswordResetEmail(email)
-            alert('Email Sent')
-        }
+            toast('Email Sent')
+        } else {
+            toast("Please Enter Your Email Address");
+          }
     }
 
     const handleEmailOnBlur = event => {
@@ -89,6 +93,7 @@ const SignIn = () => {
                 </Form.Group>
             </Form>
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };

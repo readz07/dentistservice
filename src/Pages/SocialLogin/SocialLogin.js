@@ -30,7 +30,7 @@ const SocialLogin = () => {
             <hr/>
             <p>{errorMsg}</p>
             <p>OR</p>
-            <button onClick={()=>signInWithGoogle()} type="button" class="btn btn-primary btn-lg btn-block">Sign In With Gmail</button>
+            <button onClick={()=>signInWithGoogle()} type="button" class="btn btn-primary btn-lg btn-block">Sign In With Google</button>
         </div>
     );
 };

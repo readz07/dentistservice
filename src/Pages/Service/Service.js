@@ -10,7 +10,7 @@ const Service = ({service}) => {
     }
     return (     
             
-             <Card>
+             <Card className='border border-light border-1'>
                     <Card.Img variant="top" src={image} alt="image" width={50}/>
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>

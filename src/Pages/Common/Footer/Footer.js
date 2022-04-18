@@ -6,7 +6,7 @@ const Footer = () => {
     
     return (
         <div className='mx-auto bg-primary text-center p-3 text-white'>
-             <p> Copyrights &copy; {thisYear}</p> 
+             <p> Copyright &copy; {thisYear}</p> 
         </div>
     );
 };
